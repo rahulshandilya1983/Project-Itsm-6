@@ -1,7 +1,7 @@
 {
-  "utterance": "what is my Name in ServiceNow Instance",
+  "utterance": "give me instance details",
   "intent_type": "itsm_user_intent",
   "intent": {
-    "ItsmUserKeyword": "what is my Name in ServiceNow Instance"
+    "ItsmUserKeyword": "give me instance details"
   }
 }
