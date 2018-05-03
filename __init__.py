@@ -74,8 +74,11 @@ class ItsmUserSkill(MycroftSkill):
             x += 1
 
         self.speak("Hello ")
-        self.speak(detail)
-        self.speak("Please look into the issue as it may become serious")
+        if detail != "":
+            self.speak(detail)
+            self.speak("Please look into the issue as it may become serious")
+        else:
+            self.speak("Your system is running in good condition, Thank you")
         
 
     def stop(self):
