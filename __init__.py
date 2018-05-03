@@ -52,7 +52,7 @@ class ItsmUserSkill(MycroftSkill):
         #                     self.handle_hello_world_intent)
 
     def handle_itsm_user_intent(self, message):
-        url = 'https://dev22921.service-now.com/api/now/table/v_transaction?sysparm_query=foreground%3Dtrue%5Eage%3Ejavascript%3Ags.getDurationDate('0%200%3A0%3A30')&sysparm_display_value=true&sysparm_exclude_reference_link=true&sysparm_fields=user%2Curl'
+        url = 'https://dev22921.service-now.com/api/now/table/v_transaction?sysparm_query=foreground%3Dtrue&sysparm_display_value=true&sysparm_exclude_reference_link=true&sysparm_fields=user%2Curl%2Ctype%2Cage'
         user = '531834'
         pwd = 'Welcome!2345'
         headers = {"Content-Type":"application/json","Accept":"application/json"}
