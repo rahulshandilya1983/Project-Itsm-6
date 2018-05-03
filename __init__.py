@@ -73,8 +73,8 @@ class ItsmUserSkill(MycroftSkill):
                 detail += "A transaction run by {} of type {} is running on the table {} for more than 30 seconds ".format(r[x]['user'], r[x]['type'], r[x]['url'])
             x += 1
 
-        self.speak("Hello")
-        #self.speak(detail)
+        self.speak("Hello ")
+        self.speak(detail)
         self.speak("Please look into the issue as it may become serious")
         
 
