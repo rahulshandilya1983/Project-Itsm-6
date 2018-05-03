@@ -64,13 +64,15 @@ class ItsmUserSkill(MycroftSkill):
             exit()
         # Decode the JSON response into a dictionary and use the data
         data = response.json()
-        #name = data['result']
-        #x = 0
-        #length = len(data['result'])
-        #detail = ""
-        #while x<length:
-        #    detail += "A transaction run by {} of type {} is running on the table {} for more than 30 seconds".format(name[x]['user'], name[x]['type'], name[x]['url'])
-        #    x += 1
+        r = data['result']
+        x = 0
+        length = len(data['result'])
+        detail = ""
+        for x in range(0, length):
+            if r[x]['age'].find("Minute") != -1:
+                detail += "A transaction run by {} of type {} is running on the table {} for more than 30 seconds ".format(r[x]['user'], r[x]['type'], r[x]['url'])
+            x += 1
+
         self.speak("Hello")
         #self.speak(detail)
         self.speak("Please look into the issue as it may become serious")
